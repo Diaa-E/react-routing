@@ -1,6 +1,12 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useParams } from "react-router-dom"
+import Popeye from "./Popeye";
+import Spinach from "./Spinach";
+import DefualtProfile from "./DefaultProfile";
 
 const Profile = ({ }) => {
+
+    const { name } = useParams();
+
     return (
         <div>
             <h1>Profile title</h1>
@@ -13,7 +19,17 @@ const Profile = ({ }) => {
             <Link to="/">Home</Link>
             <hr />
             <h2>Active profile is here:</h2>
-            <Outlet/>
+            {
+                name === "popeye" ?
+                (
+                    <Popeye />
+                ):
+                name === "spinach" ?
+                (
+                    <Spinach />
+                ):
+                <DefualtProfile/>
+            }
         </div>
     )
 }
