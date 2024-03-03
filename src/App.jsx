@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Link } from 'react-router-dom'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
@@ -13,7 +10,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="Profile">Profile page</a>
+            <Link to="profile">Profile page</Link>
           </li>
         </ul>
       </nav>

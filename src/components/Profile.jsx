@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Profile = ({ }) => {
     return (
         <div>
@@ -8,6 +10,7 @@ const Profile = ({ }) => {
                 maiores a officia inventore totam recusandae nihil id 
                 officiis impedit eum, nostrum, delectus porro sint.
             </p>
+            <Link to="/">Home</Link>
         </div>
     )
 }
