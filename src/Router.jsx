@@ -16,6 +16,10 @@ const Router = ({ }) => {
             errorElement: <ErrorPage/>
           },
           {
+            path: "profile",
+            element: <Profile />
+          },
+          {
             path: "profile/:name",
             element: <Profile />,
           }
