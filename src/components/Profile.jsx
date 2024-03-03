@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom"
 
 const Profile = ({ }) => {
     return (
@@ -11,6 +11,9 @@ const Profile = ({ }) => {
                 officiis impedit eum, nostrum, delectus porro sint.
             </p>
             <Link to="/">Home</Link>
+            <hr />
+            <h2>Active profile is here:</h2>
+            <Outlet/>
         </div>
     )
 }
