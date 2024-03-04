@@ -17,12 +17,14 @@ const Router = ({ }) => {
           },
           {
             path: "profile",
-            element: <Profile />
-          },
-          {
-            path: "profile/:name",
             element: <Profile />,
-          }
+            children: [
+              {
+                path: ":name",
+                element: <Profile />,
+              }
+            ]
+          },
     ]);
 
     return (
